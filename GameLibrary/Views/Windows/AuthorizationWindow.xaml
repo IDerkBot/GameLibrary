@@ -1,0 +1,46 @@
+﻿<Window
+    Height="220"
+    Padding="10"
+    Title="AuthorizationWindow"
+    Width="220"
+    mc:Ignorable="d"
+    x:Class="GameLibrary.Views.Windows.AuthorizationWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label
+            Content="Авторизация"
+            FontSize="14"
+            FontWeight="Medium"
+            Grid.Row="0"
+            HorizontalAlignment="Center"
+            Margin="0,5" />
+        <TextBox
+            Grid.Row="1"
+            Margin="0,5"
+            Name="TbLogin" />
+        <PasswordBox
+            Grid.Row="2"
+            Margin="0,5"
+            Name="PbPassword" />
+        <Button
+            Content="Войти"
+            Grid.Row="3"
+            Margin="0,5"
+            Name="BtnLogin" />
+        <Button
+            Content="Регистрация"
+            Grid.Row="4"
+            Margin="0,5"
+            Name="BtnRegistration" />
+    </Grid>
+</Window>
