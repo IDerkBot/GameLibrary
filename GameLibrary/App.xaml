@@ -1,0 +1,8 @@
+﻿<Application
+    StartupUri="/Views/Windows/AuthorizationWindow.xaml"
+    x:Class="GameLibrary.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:local="clr-namespace:GameLibrary"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources />
+</Application>
