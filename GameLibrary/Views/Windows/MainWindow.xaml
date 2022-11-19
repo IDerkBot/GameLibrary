@@ -9,5 +9,23 @@
     xmlns:local="clr-namespace:GameLibrary"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid />
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button Content="Главная" />
+            <Button Content="Игры" />
+            <Button Content="Программы" />
+            <Button Content="Аккаунт" />
+            <Button Content="Настройки" />
+            <Button Content="Выйти" />
+        </StackPanel>
+
+        <Frame
+            Grid.Column="1"
+            Name="MainFrame"
+            NavigationUIVisibility="Hidden" />
+    </Grid>
 </Window>
