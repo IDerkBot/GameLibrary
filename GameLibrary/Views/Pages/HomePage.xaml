@@ -1,0 +1,41 @@
+﻿<Page x:Class="GameLibrary.Views.Pages.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" Loaded="HomePage_OnLoaded"
+      xmlns:models="clr-namespace:GameLibrary.Models.Entity;assembly=GameLibrary.Models"
+      Title="HomePage" Height="450" Width="800">
+    <Grid>
+        <ListView Name="LvApps">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate DataType="{x:Type models:App}">
+                    <Border CornerRadius="5">
+                        <Grid>
+                            <Image x:Name="ImageApp"/>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                
+                                <Label Grid.Row="0" Content="{Binding Title}"/>
+                                <Label Grid.Row="1" Content="{Binding Description}"/>
+                                
+                                <Button Grid.Row="2" Content="Скачать" x:Name="BtnDownload"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
