@@ -1,46 +1,55 @@
 ﻿<Window
-    Height="220"
-    Padding="10"
-    Title="AuthorizationWindow"
-    Width="220"
-    mc:Ignorable="d"
     x:Class="GameLibrary.Views.Windows.AuthorizationWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid>
+    Title="AuthorizationWindow"
+    Width="220"
+    Height="220"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid Margin="10">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        <Button
+            HorizontalAlignment="Right"
+            Click="BtnClose_OnClick"
+            Content="Close" />
         <Label
-            Content="Авторизация"
-            FontSize="14"
-            FontWeight="Medium"
-            Grid.Row="0"
-            HorizontalAlignment="Center"
-            Margin="0,5" />
-        <TextBox
             Grid.Row="1"
-            Margin="0,5"
-            Name="TbLogin" />
-        <PasswordBox
+            Margin="0,-20,0,5"
+            HorizontalAlignment="Center"
+            Content="Авторизация"
+            FontSize="18"
+            FontWeight="Light" />
+        <TextBox
+            Name="TbLogin"
             Grid.Row="2"
-            Margin="0,5"
-            Name="PbPassword" />
-        <Button
-            Content="Войти"
+            Margin="0,5" />
+        <PasswordBox
+            Name="PbPassword"
             Grid.Row="3"
-            Margin="0,5"
-            Name="BtnLogin" />
+            Margin="0,5" />
         <Button
-            Content="Регистрация"
+            Name="BtnLogin"
             Grid.Row="4"
             Margin="0,5"
-            Name="BtnRegistration" />
+            Click="BtnLogin_OnClick"
+            Content="Войти" />
+        <Button
+            Name="BtnRegistration"
+            Grid.Row="5"
+            Margin="0,5"
+            Click="BtnRegistration_OnClick"
+            Content="Регистрация" />
     </Grid>
 </Window>
