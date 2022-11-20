@@ -1,10 +1,10 @@
-﻿namespace GameLibrary.Models;
+﻿namespace GameLibrary.Models.Enums;
 
 public enum Platform
 {
     Windows,
     Android,
-    IOS,
+    Ios,
     Playstation,
     XBox,
     Linux

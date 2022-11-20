@@ -1,4 +1,6 @@
-﻿namespace GameLibrary.Models.Entity;
+﻿using GameLibrary.Models.Enums;
+
+namespace GameLibrary.Models.Entity;
 
 public class App
 {
@@ -8,4 +10,5 @@ public class App
     public Platform[] Platforms { get; set; }
     public string Link { get; set; }
     public byte[] Image { get; set; }
+    public TypeApp Type { get; set; }
 }
