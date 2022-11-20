@@ -6,7 +6,6 @@
     x:Class="GameLibrary.Views.Windows.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:GameLibrary"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>
@@ -14,17 +13,57 @@
             <ColumnDefinition Width="40" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <StackPanel>
-            <Button Content="Главная" />
-            <Button Content="Игры" />
-            <Button Content="Программы" />
-            <Button Content="Аккаунт" />
-            <Button Content="Настройки" />
-            <Button Content="Выйти" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <Button
+                Click="BtnBars_OnClick"
+                Content="Bars"
+                Height="40"
+                Width="40" />
+            <Button
+                Click="BtnHome_OnClick"
+                Content="Главная"
+                Height="40"
+                Width="40" />
+            <Button
+                Click="BtnGames_OnClick"
+                Content="Игры"
+                Height="40"
+                Width="40" />
+            <Button
+                Click="BtnPrograms_OnClick"
+                Content="Программы"
+                Height="40"
+                Width="40" />
+        </StackPanel>
+
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="1"
+            VerticalAlignment="Bottom">
+            <Button
+                Click="BtnAccount_OnClick"
+                Content="Аккаунт"
+                Height="40"
+                Width="40" />
+            <Button
+                Click="BtnSettings_OnClick"
+                Content="Настройки"
+                Height="40"
+                Width="40" />
+            <Button
+                Click="BtnExit_OnClick"
+                Content="Выйти"
+                Height="40"
+                Width="40" />
         </StackPanel>
 
         <Frame
             Grid.Column="1"
+            Grid.Row="1"
             Name="MainFrame"
             NavigationUIVisibility="Hidden" />
     </Grid>
