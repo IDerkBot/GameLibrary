@@ -6,8 +6,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="AuthorizationWindow"
     Width="220"
-    Height="220"
+    Height="250"
+    Background="{StaticResource PrimaryBrush}"
     ResizeMode="NoResize"
+    Style="{StaticResource WindowStyle}"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
     mc:Ignorable="d">
@@ -15,39 +17,50 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Button
-            HorizontalAlignment="Right"
-            Click="BtnClose_OnClick"
-            Content="Close" />
-        <Label
-            Grid.Row="1"
-            Margin="0,-20,0,5"
-            HorizontalAlignment="Center"
-            Content="Авторизация"
-            FontSize="18"
-            FontWeight="Light" />
+        <Grid>
+            <Button
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Click="BtnClose_OnClick"
+                Content="Close"
+                Style="{StaticResource BtnClose}" />
+            <Label
+                Margin="0,0,0,5"
+                Padding="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Content="Авторизация"
+                FontSize="18"
+                FontWeight="Medium"
+                Foreground="{StaticResource NegativeBrush}" />
+        </Grid>
         <TextBox
             Name="TbLogin"
-            Grid.Row="2"
-            Margin="0,5" />
+            Grid.Row="1"
+            Height="35"
+            Margin="0,5"
+            HorizontalContentAlignment="Center" />
         <PasswordBox
             Name="PbPassword"
-            Grid.Row="3"
+            Grid.Row="2"
+            Height="35"
             Margin="0,5" />
         <Button
             Name="BtnLogin"
-            Grid.Row="4"
+            Grid.Row="3"
+            Width="Auto"
             Margin="0,5"
             Click="BtnLogin_OnClick"
             Content="Войти" />
         <Button
             Name="BtnRegistration"
-            Grid.Row="5"
+            Grid.Row="4"
+            Width="Auto"
             Margin="0,5"
             Click="BtnRegistration_OnClick"
             Content="Регистрация" />

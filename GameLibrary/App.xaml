@@ -1,8 +1,15 @@
 ﻿<Application
-    StartupUri="/Views/Windows/AuthorizationWindow.xaml"
     x:Class="GameLibrary.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:GameLibrary"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Application.Resources />
+    StartupUri="/Views/Windows/AuthorizationWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/GameLibrary.Controls;component/Themes/Icons.xaml" />
+                <ResourceDictionary Source="/GameLibrary.Controls;component/Themes/Dark.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
